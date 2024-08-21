@@ -1,3 +1,5 @@
+@import "../../../variables";
+
 .news-container {
   padding: 12px;
   display: none;
@@ -32,7 +34,7 @@
         transition: background-color 600ms;
         
         &:hover {
-          background-color: #dfdfe0;
+          background-color: $main-hover-color;
         }
       }
 

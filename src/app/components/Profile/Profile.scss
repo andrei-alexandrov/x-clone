@@ -1,0 +1,60 @@
+@import "../../../variables";
+
+.profile-container {
+  color: #4a5568;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $main-hover-color;
+  }
+
+  .profile-img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50px;
+    margin-left: 10px;
+  }
+
+  .profile-details {
+    display: none;
+    line-height: 5px;
+
+    .profile-name {
+      font-weight: bold;
+    }
+    .profile-userName {
+      font-weight: 400;
+      color: rgb(108, 108, 108);
+    }
+  }
+
+  .profile-dots {
+    display: none;
+
+    &:hover {
+        color: #2563eb;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .profile-container {
+    .profile-img {
+      margin-right: 1rem;
+    }
+
+    .profile-details {
+      display: block;
+    }
+
+    .profile-dots {
+      display: block;
+      margin: 0 1.3rem;
+    }
+  }
+}
