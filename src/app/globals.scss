@@ -4,3 +4,18 @@ body {
   overflow-x: hidden;
 }
 
+.layout-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 82rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 640px) {
+  .sidebar-container {
+    display: block;
+  }
+}
+
+

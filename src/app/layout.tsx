@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.scss";
+import SessionWrapper from "./components/SessionWrapper";
 import Sidebar from "./components/Sidebar/Sidebar";
 import News from "./components/News/News";
-import "./layout.scss";
+
+import "./globals.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,14 +19,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <div className="layout-container">
-          <Sidebar />
-          {children}
-          <News />
-        </div>
-      </body>
-    </html>
+    <SessionWrapper>
+      <html lang="en">
+        <body className={inter.className}>
+          <div className="layout-container">
+            <Sidebar />
+            {children}
+            <News />
+          </div>
+        </body>
+      </html>
+    </SessionWrapper>
   );
 }
